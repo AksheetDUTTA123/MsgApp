@@ -53,4 +53,5 @@ userSchema.pre("save", async function (next) {
     return decrypt(this.email);
   };
 const User = mongoose.model("User", userSchema);
+export { encrypt, decrypt };
 export default User;
